@@ -5,7 +5,7 @@
 using namespace std;
 
 // code below assumes no V_ (no need for traversal or Dijkstra's)
-// also adj ls vector of vectors, write to csv
+// also write to txt instead of csv
 
 void Graph::write() {
     // create the txt file
