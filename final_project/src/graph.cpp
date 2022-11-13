@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include "graph.h"
+
 using namespace std;
 
 // code below assumes no V_ (no need for traversal or Dijkstra's)
