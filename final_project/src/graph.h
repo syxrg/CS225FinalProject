@@ -4,7 +4,7 @@ using namespace std;
 
 class Graph {
     private:
-        vector<vector> adjacency_;
+        vector<vector<int>> adjacency_;
     public:
         void write();
 };
