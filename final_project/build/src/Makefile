@@ -131,6 +131,30 @@ src/fast:
 	cd /workspaces/cs225/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
+BFS.o: BFS.cpp.o
+.PHONY : BFS.o
+
+# target to build an object file
+BFS.cpp.o:
+	cd /workspaces/cs225/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BFS.cpp.o
+.PHONY : BFS.cpp.o
+
+BFS.i: BFS.cpp.i
+.PHONY : BFS.i
+
+# target to preprocess a source file
+BFS.cpp.i:
+	cd /workspaces/cs225/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BFS.cpp.i
+.PHONY : BFS.cpp.i
+
+BFS.s: BFS.cpp.s
+.PHONY : BFS.s
+
+# target to generate assembly for a file
+BFS.cpp.s:
+	cd /workspaces/cs225/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BFS.cpp.s
+.PHONY : BFS.cpp.s
+
 graph.o: graph.cpp.o
 .PHONY : graph.o
 
@@ -188,6 +212,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src"
+	@echo "... BFS.o"
+	@echo "... BFS.i"
+	@echo "... BFS.s"
 	@echo "... graph.o"
 	@echo "... graph.i"
 	@echo "... graph.s"
