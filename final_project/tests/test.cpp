@@ -58,3 +58,4 @@ TEST_CASE("Kosaraju: Simple, Directed Tree"){
     vector <vector<int>> expected = {{0}, {2}, {6}, {5}, {1}, {4}, {3}};
     REQUIRE(vec == expected); 
 }
+

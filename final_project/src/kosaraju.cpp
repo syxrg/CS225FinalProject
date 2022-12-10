@@ -20,10 +20,10 @@ void Kosaraju::DFS(int vertex, vector<bool>& visited){
     }
 }
 
-Kosaraju::Kosaraju(Graph G): G_(G), RevG_(){
+Kosaraju::Kosaraju(Graph G): G_(G), RevG_() {
     vector<list<pair<int,float>>> vec(G.getSize(), list<pair<int,float>>());
-    for(int i = 0; i <  G.getSize(); i++){
-        list<pair<int,float>> adjacent = G.getAdjacentVertices(i);
+    for(int i = 0; i < G.getSize(); i++){
+        list<pair<int, float>> adjacent = G.getAdjacentVertices(i);
         for(auto j = adjacent.begin(); j != adjacent.end(); j++){
             vec[j->first].push_back({i, j->second});
         }
@@ -39,7 +39,7 @@ void Kosaraju::calculateSSC(){
     stack<int> s;
     vector<bool> visited(G_.getSize(), false);
     for(int i = 0; i < G_.getSize(); i++){
-        if(!visited[i]){
+        if(!visited[i]) {
             visit(i, visited, s);
         }
     }

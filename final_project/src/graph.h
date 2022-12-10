@@ -23,7 +23,7 @@ class Graph {
     */
     int getSize();
     /**
-    add an directed edge from u to v
+    add a directed edge from u to v
     */
     void addEdge(int u, int v, int w);
     /**
