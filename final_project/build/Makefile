@@ -131,6 +131,19 @@ test/fast:
 .PHONY : test/fast
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named lodepng
 
 # Build rule for target.
@@ -182,6 +195,30 @@ src/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
+entry/main.o: entry/main.cpp.o
+.PHONY : entry/main.o
+
+# target to build an object file
+entry/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/entry/main.cpp.o
+.PHONY : entry/main.cpp.o
+
+entry/main.i: entry/main.cpp.i
+.PHONY : entry/main.i
+
+# target to preprocess a source file
+entry/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/entry/main.cpp.i
+.PHONY : entry/main.cpp.i
+
+entry/main.s: entry/main.cpp.s
+.PHONY : entry/main.s
+
+# target to generate assembly for a file
+entry/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/entry/main.cpp.s
+.PHONY : entry/main.cpp.s
+
 tests/test.o: tests/test.cpp.o
 .PHONY : tests/test.o
 
@@ -217,8 +254,12 @@ help:
 	@echo "... binarytree"
 	@echo "... cs225"
 	@echo "... lodepng"
+	@echo "... main"
 	@echo "... src"
 	@echo "... test"
+	@echo "... entry/main.o"
+	@echo "... entry/main.i"
+	@echo "... entry/main.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
