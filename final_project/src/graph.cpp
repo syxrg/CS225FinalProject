@@ -112,3 +112,11 @@ int Graph::getSize(){
 list<pair<int,float>> Graph::getAdjacentVertices(int v){
     return adjacency_[v];
 }
+
+int Graph::getWeight(int u, int v) {
+    for(auto pair : adjacency_[u]) {
+        if(pair.first == v) {
+            return pair.second;
+        }
+    }
+}

@@ -18,6 +18,7 @@ class Graph {
         void addVertex();
         list<pair<int,float>> getAdjacentVertices(int v);
         void write(string new_file);
+        int getWeight(int u, int v);
 
     private:
         vector<list<pair<int,float>>> adjacency_;
