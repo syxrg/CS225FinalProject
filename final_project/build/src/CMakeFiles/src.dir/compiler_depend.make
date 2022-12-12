@@ -252,6 +252,8 @@ src/CMakeFiles/src.dir/BFS.cpp.o: ../src/BFS.cpp \
   /usr/include/c++/11/debug/deque \
   /usr/include/c++/11/bits/stl_queue.h
 
+src/CMakeFiles/src.dir/dijkstra.cpp.o: ../src/dijkstra.cpp
+
 src/CMakeFiles/src.dir/graph.cpp.o: ../src/graph.cpp \
   ../src/graph.h \
   /usr/include/c++/11/vector \
@@ -917,6 +919,8 @@ src/CMakeFiles/src.dir/kosaraju.cpp.o: ../src/kosaraju.cpp \
 /usr/include/c++/11/bits/hash_bytes.h:
 
 /usr/include/c++/11/typeinfo:
+
+../src/dijkstra.cpp:
 
 /usr/include/stdlib.h:
 
