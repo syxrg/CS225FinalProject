@@ -1,7 +1,7 @@
 src/CMakeFiles/src.dir/kosaraju.cpp.o: \
-  /workspaces/cs225/final_project/src/kosaraju.cpp \
-  /workspaces/cs225/final_project/src/kosaraju.h \
-  /workspaces/cs225/final_project/src/graph.h \
+  /workspaces/cs2251/proj/final_project/src/kosaraju.cpp \
+  /workspaces/cs2251/proj/final_project/src/kosaraju.h \
+  /workspaces/cs2251/proj/final_project/src/graph.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/vector \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algobase.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
