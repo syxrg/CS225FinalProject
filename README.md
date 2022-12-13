@@ -14,9 +14,13 @@ Our project is based on interpreting the Airports Route System from the Openflig
 ### File Structure 
 
 `BFS.cpp` is where the implentation of Breadth First Search is
+
 `kosaraju.cpp` is where the implementation of Kosaraju Algorithm is 
+
 `main.cpp` is where the program is executed. 
+
 `test.cpp` is where important test cases are that authenticate the implemention of our chosen algorithms
+
 ### Run Instructions
 
 To run our project, you can either clone this project by copy and pasting the following: 
