@@ -5,12 +5,14 @@
 #include <fstream>
 #include <sstream> 
 #include <string>
+#include <map>
 using namespace std;
 
 class Graph {
     public:
     Graph();
     Graph(string filename);
+    Graph(string filename, string hashfile);
     ~Graph();
     
     /**
@@ -43,6 +45,11 @@ class Graph {
     * ie) 0, 1, 2.3434343, 2, 3.4543222, ...
     */
     void write();
+    /***
+    * takes in a key and returns the value from the map
+    */
+    int getCorrespondence(int val);
+
     private:
     /**
     * V_ = number of vertices
@@ -50,5 +57,5 @@ class Graph {
     */
     int V_;
     vector<list<pair<int,float>>> adjacency_;
-
+    map<int,int> map_;
 };
