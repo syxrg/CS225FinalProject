@@ -55,6 +55,7 @@ To compile the code:
  ```
  
 ### Example Output
+See output.png
 
  
 ### Presentation Video 
