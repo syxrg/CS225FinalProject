@@ -24,7 +24,7 @@ class Graph {
         /***
         * takes in a key and returns the value from the map
         */
-        int getCorrespondence(int val)
+        int getCorrespondence(int val);
 
     private:
         vector<list<pair<int,float>>> adjacency_;
