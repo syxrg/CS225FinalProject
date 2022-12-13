@@ -1,5 +1,5 @@
 # BBIS
-# Final Project CS225: Shortest Path between Airports
+# Final Project CS225: Airports Route System
 
 ### Group Members
 - Serena Gong
