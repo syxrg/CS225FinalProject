@@ -7,6 +7,8 @@
 #include <string>
 using namespace std;
 
+// TODO: hashmap in cpp
+
 class Graph {
     public:
         Graph();
