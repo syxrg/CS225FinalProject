@@ -86,3 +86,37 @@ TEST_CASE("BFS: Simple, Directed Tree"){
     REQUIRE(v == expected); 
 }
 
+
+TEST_CASE("BFS: Number of edges between nodes in a tree"){
+    /*
+    *                 0
+    *              1/   \2
+    *             1       2
+    *          3/  \4   5/  \6
+    *          3    4   5    6
+    */
+    Graph G("../data/readGraph2.csv");
+    BFS bfs(G);
+    int result = bfs.search(0, 4);
+    int expected = 4;   
+    REQUIRE(result == expected); 
+    int result2 = bfs.search(0, 6);
+    REQUIRE(result2 == 6); 
+}
+
+TEST_CASE("BFS: number of edges between nodes in a simple, directed pentagon") {
+    /*
+    * w(e):  1    2    3    4    5     
+    * e:   0 -> 1 -> 2 -> 3 -> 4 -> 0     
+    */
+    Graph G("../data/readGraph1.csv");
+    BFS bfs(G);
+    int result = bfs.search(0, 4);
+    int expected = 4;   
+    REQUIRE(result == expected);  
+    int result2 = bfs.search(0, 3);
+    int expected2 = 3;   
+    REQUIRE(result2 == expected2);  
+}
+
+
