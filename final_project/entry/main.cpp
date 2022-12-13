@@ -1,6 +1,9 @@
 #include "../src/kosaraju.h"
+#include "../src/BFS.h"
+#include "../src/shortestpaths.h"
 #include "../src/graph.h"
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
@@ -26,6 +29,15 @@ int main() {
     Print the number of flights needed to travel between the airports.
     */
     BFS bfs(G);
-    std::cout << bfs.search(737, 3159) << " flights are needed to travel between the airports." << endl;
-    return 0;
+    cout << bfs.search(737, 3159) << " flights are needed to travel between the airports." << endl;
+    
+    /**
+     * Print the distance between those airports
+     * 
+    */
+   ShortestPaths s;
+   auto out = s.dijkstra(G, 737);
+   cout << "The distance between those ^ airports is: " << out.first[3159] << std::endl;
+   return 0;
+
 }

@@ -1,4 +1,5 @@
 #include "graph.h"
+#include "BFS.h"
 #include "kosaraju.h"
 #include "shortestpaths.h"
 #include <catch2/catch_test_macros.hpp>
