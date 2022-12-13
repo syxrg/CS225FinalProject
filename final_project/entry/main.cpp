@@ -22,5 +22,10 @@ int main() {
         cout << endl;
         num++;
     }
+    /*
+    Print the number of flights needed to travel between the airports.
+    */
+    BFS bfs(G);
+    std::cout << bfs.search(737, 3159) << " flights are needed to travel between the airports." << endl;
     return 0;
 }
