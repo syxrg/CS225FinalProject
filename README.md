@@ -1,17 +1,17 @@
 # BBIS
 # Final Project CS225: Shortest Path between Airports
 
-#### Group Members
+### Group Members
 - Serena Gong
 - Bob Jiang
 - Irina Vyacheslavovna Malyugina 
 - Jung Soo (Ben) Park
 
-#### Overview
+### Overview
 
-#### File Structure 
+### File Structure 
 
-#### Run Instructions
+### Run Instructions
 
 To run our project, you can either clone this project by copy and pasting the following: 
 
@@ -42,6 +42,6 @@ To compile the code:
  ./test
  ```
  
- #### Example Output
+### Example Output
  
-#### Presentation Video 
+### Presentation Video 
