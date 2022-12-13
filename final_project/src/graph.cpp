@@ -35,6 +35,45 @@ Graph::Graph(string filename) {
     fs.close();
     initialize(V, adjacency);
 }
+Graph::Graph(string filename, string hashfile) {
+    fstream fs;
+    fs.open(filename);
+    
+    int V;
+    vector<list<pair<int,float>>> adjacency;
+    list<pair<int,float>>  adjacent;
+    string line, word1, word2;
+    
+    getline(fs, line);
+    V = stoi(line);
+    for(int i = 0; i < V; i++){
+        adjacency.push_back({});
+    }
+  
+    while(getline(fs, line)){
+        adjacent.clear();
+        stringstream s(line);
+        getline(s, word1, ',');
+        int first = stoi(word1);
+        while(getline(s, word1, ',')){
+            getline(s, word2, ',');
+            adjacent.push_back({stoi(word1), stof(word2)});
+        }
+        adjacency[first] = adjacent;
+    }
+    fs.close();
+    initialize(V, adjacency);
+
+    fs.open(hashfile);
+    while(getline(fs,line)){
+        stringstream s(line);
+        while(getline(s, word1, ',')){
+            getline(s, word2, ',');
+            map_.insert({stoi(word1), stoi(word2)});
+        }
+    }
+    fs.close();
+}
 Graph::Graph(){};
 Graph::~Graph(){};
 
@@ -102,6 +141,12 @@ void Graph::initialize(int V, vector<list<pair<int,float>>> adjacency){
 */
 int Graph::getSize(){
     return V_;
+}
+int Graph::getCorrespondence(int val){
+    if(!map_.empty()){
+    return map_[val];
+    }
+    return -1;
 }
 
 /**
