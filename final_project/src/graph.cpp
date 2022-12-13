@@ -119,4 +119,5 @@ int Graph::getWeight(int u, int v) {
             return pair.second;
         }
     }
+    return -1;
 }

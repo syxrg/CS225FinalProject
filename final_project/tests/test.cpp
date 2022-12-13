@@ -1,5 +1,6 @@
 #include "graph.h"
 #include "kosaraju.h"
+#include "shortestpaths.h"
 #include <catch2/catch_test_macros.hpp>
 #include <iostream>
 #include <sstream>
@@ -121,3 +122,33 @@ TEST_CASE("Kosaraju: Simple, Directed Tree"){
     REQUIRE(vec == expected); 
 }
 
+TEST_CASE("dijkstra: directed cycle") {
+    /**
+     *       1    2    3    4    5     
+     *    0 -> 1 -> 2 -> 3 -> 4 -> 0     
+    */
+    ShortestPaths s;
+    Graph G("../tests/write_test1.txt");
+    auto out = s.dijkstra(G, 0);
+    vector<float> exp_dist = {0, 1, 3, 6, 10};
+    vector<int> exp_pre = {-1, 0, 1, 2, 3};
+    REQUIRE(exp_dist == out.first);
+    REQUIRE(exp_pre == out.second);
+ }
+
+ TEST_CASE("dijkstra: perfect tree") {
+    /**
+     *                 0
+     *              1/   \2
+     *             1       2
+     *          3/  \4   5/  \6
+     *          3    4   5    6
+    */
+    ShortestPaths s;
+    Graph G("../data/readGraph2.csv");
+    auto out = s.dijkstra(G, 0);
+    vector<float> exp_dist = {0, 1, 2, 4, 5, 7, 8};
+    vector<int> exp_pre = {-1, 0, 0, 1, 1, 2, 2};
+    REQUIRE(exp_dist == out.first);
+    REQUIRE(exp_pre == out.second);
+ }

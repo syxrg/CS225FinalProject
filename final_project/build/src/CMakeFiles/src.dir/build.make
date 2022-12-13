@@ -83,24 +83,10 @@ src/CMakeFiles/src.dir/BFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/BFS.cpp.s"
 	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs2251/proj/final_project/src/BFS.cpp -o CMakeFiles/src.dir/BFS.cpp.s
 
-src/CMakeFiles/src.dir/dijkstra.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/dijkstra.cpp.o: ../src/dijkstra.cpp
-src/CMakeFiles/src.dir/dijkstra.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/dijkstra.cpp.o"
-	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/dijkstra.cpp.o -MF CMakeFiles/src.dir/dijkstra.cpp.o.d -o CMakeFiles/src.dir/dijkstra.cpp.o -c /workspaces/cs2251/proj/final_project/src/dijkstra.cpp
-
-src/CMakeFiles/src.dir/dijkstra.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/dijkstra.cpp.i"
-	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/cs2251/proj/final_project/src/dijkstra.cpp > CMakeFiles/src.dir/dijkstra.cpp.i
-
-src/CMakeFiles/src.dir/dijkstra.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/dijkstra.cpp.s"
-	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs2251/proj/final_project/src/dijkstra.cpp -o CMakeFiles/src.dir/dijkstra.cpp.s
-
 src/CMakeFiles/src.dir/graph.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/graph.cpp.o: ../src/graph.cpp
 src/CMakeFiles/src.dir/graph.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/src.dir/graph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/graph.cpp.o"
 	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/graph.cpp.o -MF CMakeFiles/src.dir/graph.cpp.o.d -o CMakeFiles/src.dir/graph.cpp.o -c /workspaces/cs2251/proj/final_project/src/graph.cpp
 
 src/CMakeFiles/src.dir/graph.cpp.i: cmake_force
@@ -114,7 +100,7 @@ src/CMakeFiles/src.dir/graph.cpp.s: cmake_force
 src/CMakeFiles/src.dir/kosaraju.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/kosaraju.cpp.o: ../src/kosaraju.cpp
 src/CMakeFiles/src.dir/kosaraju.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/src.dir/kosaraju.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/src.dir/kosaraju.cpp.o"
 	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/kosaraju.cpp.o -MF CMakeFiles/src.dir/kosaraju.cpp.o.d -o CMakeFiles/src.dir/kosaraju.cpp.o -c /workspaces/cs2251/proj/final_project/src/kosaraju.cpp
 
 src/CMakeFiles/src.dir/kosaraju.cpp.i: cmake_force
@@ -125,20 +111,34 @@ src/CMakeFiles/src.dir/kosaraju.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/kosaraju.cpp.s"
 	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs2251/proj/final_project/src/kosaraju.cpp -o CMakeFiles/src.dir/kosaraju.cpp.s
 
+src/CMakeFiles/src.dir/shortestpaths.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/shortestpaths.cpp.o: ../src/shortestpaths.cpp
+src/CMakeFiles/src.dir/shortestpaths.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/src.dir/shortestpaths.cpp.o"
+	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/shortestpaths.cpp.o -MF CMakeFiles/src.dir/shortestpaths.cpp.o.d -o CMakeFiles/src.dir/shortestpaths.cpp.o -c /workspaces/cs2251/proj/final_project/src/shortestpaths.cpp
+
+src/CMakeFiles/src.dir/shortestpaths.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/shortestpaths.cpp.i"
+	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/cs2251/proj/final_project/src/shortestpaths.cpp > CMakeFiles/src.dir/shortestpaths.cpp.i
+
+src/CMakeFiles/src.dir/shortestpaths.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/shortestpaths.cpp.s"
+	cd /workspaces/cs2251/proj/final_project/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs2251/proj/final_project/src/shortestpaths.cpp -o CMakeFiles/src.dir/shortestpaths.cpp.s
+
 # Object files for target src
 src_OBJECTS = \
 "CMakeFiles/src.dir/BFS.cpp.o" \
-"CMakeFiles/src.dir/dijkstra.cpp.o" \
 "CMakeFiles/src.dir/graph.cpp.o" \
-"CMakeFiles/src.dir/kosaraju.cpp.o"
+"CMakeFiles/src.dir/kosaraju.cpp.o" \
+"CMakeFiles/src.dir/shortestpaths.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
 src/libsrc.a: src/CMakeFiles/src.dir/BFS.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/dijkstra.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/graph.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/kosaraju.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/shortestpaths.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libsrc.a"

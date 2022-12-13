@@ -120,10 +120,10 @@ src/clean: src/CMakeFiles/src.dir/clean
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all: src/CMakeFiles/src.dir/all
 CMakeFiles/test.dir/all: lib/CMakeFiles/lodepng.dir/all
 CMakeFiles/test.dir/all: lib/CMakeFiles/binarytree.dir/all
 CMakeFiles/test.dir/all: lib/CMakeFiles/cs225.dir/all
+CMakeFiles/test.dir/all: src/CMakeFiles/src.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=15,16 "Built target test"
@@ -149,10 +149,10 @@ CMakeFiles/test.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: src/CMakeFiles/src.dir/all
 CMakeFiles/main.dir/all: lib/CMakeFiles/lodepng.dir/all
 CMakeFiles/main.dir/all: lib/CMakeFiles/binarytree.dir/all
 CMakeFiles/main.dir/all: lib/CMakeFiles/cs225.dir/all
+CMakeFiles/main.dir/all: src/CMakeFiles/src.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/cs2251/proj/final_project/build/CMakeFiles --progress-num=8,9 "Built target main"

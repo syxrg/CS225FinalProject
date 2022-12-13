@@ -155,30 +155,6 @@ BFS.cpp.s:
 	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BFS.cpp.s
 .PHONY : BFS.cpp.s
 
-dijkstra.o: dijkstra.cpp.o
-.PHONY : dijkstra.o
-
-# target to build an object file
-dijkstra.cpp.o:
-	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/dijkstra.cpp.o
-.PHONY : dijkstra.cpp.o
-
-dijkstra.i: dijkstra.cpp.i
-.PHONY : dijkstra.i
-
-# target to preprocess a source file
-dijkstra.cpp.i:
-	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/dijkstra.cpp.i
-.PHONY : dijkstra.cpp.i
-
-dijkstra.s: dijkstra.cpp.s
-.PHONY : dijkstra.s
-
-# target to generate assembly for a file
-dijkstra.cpp.s:
-	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/dijkstra.cpp.s
-.PHONY : dijkstra.cpp.s
-
 graph.o: graph.cpp.o
 .PHONY : graph.o
 
@@ -227,6 +203,30 @@ kosaraju.cpp.s:
 	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/kosaraju.cpp.s
 .PHONY : kosaraju.cpp.s
 
+shortestpaths.o: shortestpaths.cpp.o
+.PHONY : shortestpaths.o
+
+# target to build an object file
+shortestpaths.cpp.o:
+	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/shortestpaths.cpp.o
+.PHONY : shortestpaths.cpp.o
+
+shortestpaths.i: shortestpaths.cpp.i
+.PHONY : shortestpaths.i
+
+# target to preprocess a source file
+shortestpaths.cpp.i:
+	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/shortestpaths.cpp.i
+.PHONY : shortestpaths.cpp.i
+
+shortestpaths.s: shortestpaths.cpp.s
+.PHONY : shortestpaths.s
+
+# target to generate assembly for a file
+shortestpaths.cpp.s:
+	cd /workspaces/cs2251/proj/final_project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/shortestpaths.cpp.s
+.PHONY : shortestpaths.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -239,15 +239,15 @@ help:
 	@echo "... BFS.o"
 	@echo "... BFS.i"
 	@echo "... BFS.s"
-	@echo "... dijkstra.o"
-	@echo "... dijkstra.i"
-	@echo "... dijkstra.s"
 	@echo "... graph.o"
 	@echo "... graph.i"
 	@echo "... graph.s"
 	@echo "... kosaraju.o"
 	@echo "... kosaraju.i"
 	@echo "... kosaraju.s"
+	@echo "... shortestpaths.o"
+	@echo "... shortestpaths.i"
+	@echo "... shortestpaths.s"
 .PHONY : help
 
 

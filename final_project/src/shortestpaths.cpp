@@ -4,46 +4,51 @@
 #include <queue>
 #include "shortestpaths.h"
 
-pair<vector<int>, vector<int>> ShortestPaths::dijkstra(Graph G, int src) {
+pair<vector<float>, vector<int>> ShortestPaths::dijkstra(Graph G, int src) {
 
-    vector<int> costs = {};
+    vector<float> costs = {};
     vector<int> paths = {};
 
-    set<int> seen; // labeled set
-    int inf = std::numeric_limits<int>::infinity();
-    vector<int> Q = {};
+    float inf = std::numeric_limits<float>::infinity();
+    // built in faster for pq implement than writing own class
+    std::priority_queue<pair<float,int>, vector<pair<float,int>>, greater<pair<float,int>>> pq;
 
+    // init d with inf, p with empty (-1 used since idx 0-N-1 denotes pre)
+    // also build heap
     for(int i = 0; i < G.getSize(); i++) {
         costs.push_back(inf);
         paths.push_back(-1);
-        Q.push_back(i);
+        if(i != src) {
+            pq.push({inf, i});
+        }
+        else {
+            // use pairs with dist first, easier for cpp pq
+            pq.push({0.0, src});
+        }
     }
     costs[src] = 0;
-    
-    int u = -1;
-    int min_dist = inf;
 
-    while(Q.size()) {
-        min_dist = inf;
-        for(int i = 0; i < Q.size(); i++) {
-            if(costs[Q[i]] < min_dist) {
-                min_dist = costs[Q[i]];
-                u = Q[i];
-            }
-        }
-        Q.erase(Q.begin()+u);
+    int u = -1;
+    // repeat n times:
+    while(!pq.empty()) {
+        // removeMin()
+        u = pq.top().second;
+        pq.pop();
+
         list<pair<int, float>> neighbors = G.getAdjacentVertices(u);
         for(auto pair : neighbors) {
             int v = pair.first;
-            if(std::find(Q.begin(), Q.end(), pair.first) != Q.end() && pair.second + costs[u] < costs[v]) {
+            if(pair.second + costs[u] < costs[v]) {
                 costs[v] = pair.second + costs[u];
                 paths[v] = u;
+                pq.push({costs[v],v});
             }
         }
     }
+    return {costs, paths};
 }
 
-// backup written earlier, not for grading
+// backup written earlier, not for grade
 void ShortestPaths::floyd_warshall(Graph G) {
     int size = G.getSize();
     int inf = std::numeric_limits<int>::infinity();
@@ -77,7 +82,7 @@ int ShortestPaths::min_dist(int u, int v) {
     return all_dists[u][v];
 }
 
-int ShortestPaths::closest_dest(int src) {
+int ShortestPaths::closest_dest(size_t src) {
     int min_dist = std::numeric_limits<int>::infinity();
     int dest = src;
     for(size_t i = 0; i < all_dists.size(); i++) {
@@ -86,17 +91,4 @@ int ShortestPaths::closest_dest(int src) {
         }
     }
     return dest;
-}
-
-vector<int> ShortestPaths::new_neighbors(vector<int> vec, set<int> seen) {
-    size_t i = 0;
-    while(i < vec.size()) {
-        if(seen.find(vec[i]) != seen.end()) {
-            vec.erase(vec.begin()+i);
-        }
-        else {
-            i++;
-        }
-    }
-    return vec;
 }
