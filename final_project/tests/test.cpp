@@ -59,3 +59,30 @@ TEST_CASE("Kosaraju: Simple, Directed Tree"){
     REQUIRE(vec == expected); 
 }
 
+TEST_CASE("BFS: Simple, Directed Pentagon") {
+    /*
+    * w(e):  1    2    3    4    5     
+    * e:   0 -> 1 -> 2 -> 3 -> 4 -> 0     
+    */
+    Graph G("../data/readGraph1.csv");
+    BFS bfs(G);
+    std::vector<std::string> v = bfs.search(0);
+    std::vector<std::string> expected = {{"0"}, {"1"}, {"2"}, {"3"}, {"4"}};   
+    REQUIRE(v == expected); 
+}
+
+TEST_CASE("BFS: Simple, Directed Tree"){
+    /*
+    *                 0
+    *              1/   \2
+    *             1       2
+    *          3/  \4   5/  \6
+    *          3    4   5    6
+    */
+    Graph G("../data/readGraph2.csv");
+    BFS bfs(G);
+    std::vector<std::string> v = bfs.search(0);
+    std::vector<std::string> expected = {{"0"}, {"1"}, {"2"}, {"3"}, {"4"}, {"5"}, {"6"}};   
+    REQUIRE(v == expected); 
+}
+
