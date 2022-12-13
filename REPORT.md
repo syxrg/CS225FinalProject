@@ -17,3 +17,7 @@ The Dijkstra’s Algorithm consists in figuring out the shortest path from a ver
 ### Kosaraju 
 
 The Kosaraju Algorithm consists in performing two DFS, once to figure out the ordering necessary for the second dfs sweep by storing them in a stack- this was done using visit method, and second time removing one node at a time until the stack is empty we get the correct strongly connected components by looking the reachability from the removed node from the reversed graph-this was done in the dfs method. This will take twice the time to run a dfs algorithm, so the run time is linear. 
+
+### Example Output
+
+See output.png
