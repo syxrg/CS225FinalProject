@@ -58,6 +58,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test.dir/DependInfo.cmake"
+  "CMakeFiles/main.dir/DependInfo.cmake"
   "lib/CMakeFiles/lodepng.dir/DependInfo.cmake"
   "lib/CMakeFiles/binarytree.dir/DependInfo.cmake"
   "lib/CMakeFiles/cs225.dir/DependInfo.cmake"
